@@ -14,19 +14,20 @@ function Page() {
     const [loading, setLoading] = useState(false)
 
     console.log(user)
-    const fetchDetailsData = async () => {
-        setLoading(true);
-        try {
-            const response = await fetch(`https://dummyjson.com/user/${params.id}`);
-            const data = await response.json();
-            setData(data);
-        }
-        catch (error) {
-            console.log(error);
-        }
-        setLoading(false);
-    }
+
     useEffect(() => {
+        const fetchDetailsData = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch(`https://dummyjson.com/user/${params.id}`);
+                const data = await response.json();
+                setData(data);
+            }
+            catch (error) {
+                console.log(error);
+            }
+            setLoading(false);
+        }
         fetchDetailsData();
     }, [params.id])
 
