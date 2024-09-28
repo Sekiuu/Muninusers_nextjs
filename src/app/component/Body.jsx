@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 function Body({fillterPrompt}) {
 
-    const [users, SetUsers] = useState([])
-    const [loading, SetLoading] = useState(false)
+    const [users, setUsers] = useState([])
+    const [loading, setLoading] = useState(false)
 
     console.log(users);
     useEffect(() => {

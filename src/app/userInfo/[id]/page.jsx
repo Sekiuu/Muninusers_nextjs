@@ -10,8 +10,8 @@ function Page() {
     console.log(params)
     console.log('exist href : ', `https://dummyjson.com/user/${params.id}`)
 
-    const [user, SetData] = useState([])
-    const [loading, SetLoading] = useState(false)
+    const [user, setData] = useState([])
+    const [loading, setLoading] = useState(false)
 
     console.log(user)
 
