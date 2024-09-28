@@ -12,16 +12,16 @@ function Body({fillterPrompt}) {
     
     useEffect(() => {
         const fetchData = async () => {
-            SetLoading(true);
+            setLoading(true);
             try {
                 const response = await fetch('https://dummyjson.com/users');
                 const data = await response.json();
-                SetUsers(data.users);
+                setUsers(data.users);
             }
             catch (error) {
                 console.log(error);
             }
-            SetLoading(false);
+            setLoading(false);
         }
         fetchData();
     }, [])
