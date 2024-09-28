@@ -17,16 +17,16 @@ function Page() {
 
     useEffect(() => {
         const fetchData = async () => {
-            SetLoading(true);
+            setLoading(true);
             try {
                 const response = await fetch(`https://dummyjson.com/user/${params.id}`);
                 const data = await response.json();
-                SetData(data);
+                setData(data);
             }
             catch (error) {
                 console.log(error);
             }
-            SetLoading(false);
+            setLoading(false);
         }
         fetchData();
     }, [])

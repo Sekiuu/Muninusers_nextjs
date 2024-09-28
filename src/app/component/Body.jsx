@@ -9,6 +9,7 @@ function Body({fillterPrompt}) {
     const [loading, setLoading] = useState(false)
 
     console.log(users);
+    
     useEffect(() => {
         const fetchData = async () => {
             SetLoading(true);
