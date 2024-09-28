@@ -14,7 +14,7 @@ function Page() {
     const [loading, setLoading] = useState(false)
 
     console.log(user)
-    const fetchData = async () => {
+    const fetchDetailsData = async () => {
         setLoading(true);
         try {
             const response = await fetch(`https://dummyjson.com/user/${params.id}`);
@@ -27,7 +27,7 @@ function Page() {
         setLoading(false);
     }
     useEffect(() => {
-        fetchData();
+        fetchDetailsData();
     }, [params.id])
 
     return (
